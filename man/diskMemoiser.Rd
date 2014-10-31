@@ -42,6 +42,7 @@ diskMemoiser(fun, memo.dir = "./memo")
 %}
 \examples{
 myfunction.slow <- function(x, y) {
+  Sys.sleep(1)
   return(x + sin(y))
 }
 
