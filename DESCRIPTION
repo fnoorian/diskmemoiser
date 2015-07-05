@@ -3,7 +3,7 @@ Type: Package
 Title: Disk-based Memoisation
 Version: 1.0-2
 Date: 2015-07-06
-Author: Farzad Noorian <farzad.noorian@sydney.edu.au>
+Author: Farzad Noorian <farzad.noorian@sydney.edu.au>, Hadley Wickham
 Maintainer: Richard Davis <davisconsulting@gmail.com>
 Description: Caches function return values on disk, thus enabling faster computation by avoiding repeated re-evaluation of function calls.  Saving results on disk allows persistence between R sessions compared to memory only memoisation.  The API is designed to act as a drop-in replacement for the memoise package.
 License: GPL (>= 2)
