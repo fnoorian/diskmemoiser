@@ -1,11 +1,11 @@
 Package: diskmemoiser
 Type: Package
-Title: Disk Memoisation For R
-Version: 1.0-1
-Date: 2014-06-30
+Title: Disk-based Memoisation
+Version: 1.0-2
+Date: 2015-07-06
 Author: Farzad Noorian <farzad.noorian@sydney.edu.au>
-Maintainer: Richard Davis <richard.davis@sydney.edu.au>
-Description: Disk Memoisation for R, enabling faster computation by avoiding repeated re-evaluation of function calls.
+Maintainer: Richard Davis <davisconsulting@gmail.com>
+Description: Caches function return values on disk, thus enabling faster computation by avoiding repeated re-evaluation of function calls.  Saving results on disk allows persistence between R sessions compared to memory only memoisation.  The API is designed to act as a drop-in replacement for the memoise package.
 License: GPL (>= 2)
 Imports: digest
 Suggests: memoise
