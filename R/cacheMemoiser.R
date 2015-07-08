@@ -86,9 +86,8 @@ cacheMemoiser <- function(fun, memo.cache,
   if (use.func.contents) {
     .func.name <- digest(deparse(fun))
   } else {
-    .func.name <- digest(as.character(substitute(fun)))
+    .func.name <- as.character(substitute(fun))
   }
-  
   
   return (    
     function(...) {
