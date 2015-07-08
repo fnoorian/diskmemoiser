@@ -13,24 +13,36 @@
 
 library("digest")
 
-diskMemoiser <- function(fun, memo.dir = "./memo") {
-
+diskMemoiser <- function(fun, memo.dir = "./memo", 
+                         use.func.contents = FALSE,
+                         compare.args.as.characters = FALSE ) {
+  
   if (!file.exists(memo.dir)) {
     dir.create(memo.dir, showWarnings = FALSE, recursive = TRUE)
   }
-
-  func.name = as.character(substitute(fun))
+  
+  if (use.func.contents) {
+    .func.name <- digest(deparse(fun))
+  } else {
+    .func.name <- digest(as.character(substitute(fun)))
+  }
+  
   return (    
     function(...) {
-     hash <- tolower(digest(list(...)) )	
-      file.name = file.path(memo.dir, paste0(func.name, "_", hash, "-cache.RData"))
-
+      if (compare.args.as.characters) {
+        .hash <- tolower(digest(as.character(list(...))))
+      } else {
+        .hash <- tolower(digest(list(...)))
+      }
+      
+      file.name <- file.path(memo.dir, paste0(.func.name, "_", .hash, "-cache.RData"))
+      
       if (file.exists(file.name)) {
         load(file.name)
         return(result)
       }
-  
-      result = fun(...)
+      
+      result <- fun(...)
       save(result, file=file.name)
       return (result)
     }
