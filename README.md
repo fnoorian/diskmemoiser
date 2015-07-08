@@ -4,7 +4,7 @@ The files include source code and documentation of *diskmemoiser: Disk Memoisati
 
 ### Contact Information
  * Farzad Noorian <farzad.noorian@sydney.edu.au> 
- * Richard Davis <richard.davis@sydney.edu.au> (Maintainer)
+ * Richard Davis <richard.davis@gmail.com> (Maintainer)
 
 ### Release and Development
 

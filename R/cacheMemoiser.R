@@ -1,3 +1,16 @@
+# Utilities for memoising to disk
+
+# Author: Farzad Noorian <farzad.noorian@sydney.edu.au>
+# Maintainer: Richard Davis <richard.davis@gmail.com>
+
+# This code is partially based on memoise package by Hadley Wickham.
+# http://cran.r-project.org/web/packages/memoise/
+
+# This program is free software, distributed under the terms of
+# the GNU General Public License version 2.
+# Refer to <http://www.gnu.org/licenses/> for full terms.
+################################################################################
+
 diskCache <- function(filename = NULL) {
   # Originally from Hadley Wickham's memoise package
   #   changes: added load and save to disk
