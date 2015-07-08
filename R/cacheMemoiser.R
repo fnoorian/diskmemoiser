@@ -108,6 +108,8 @@ cacheMemoiser <- function(fun, memo.cache,
       result <- fun(...)
       memo.cache$set(.full.hash, result)
 
+      if (auto.save) {
+        memo.cache$save()
       }
 
       return (result)
