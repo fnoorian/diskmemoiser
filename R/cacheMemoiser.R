@@ -53,7 +53,7 @@ diskCache <- function(filename = NULL) {
     saveRDS(.cache, file = filename)
   }
   
-  isfilepresent <- try({file.exists(.memo.filename)})
+  isfilepresent <- try({file.exists(.memo.filename)}, silent=TRUE)
   if (isfilepresent == TRUE) {
     cache_load(.memo.filename)
   } else {
