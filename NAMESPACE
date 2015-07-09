@@ -1,7 +1,7 @@
 export(
 	"diskMemoiser", "diskMemoizer",
     "diskCache",
-    "cacheMemoiser", "cacheMemoizer"
+    "cacheMemoiser", "cacheMemoizer", "cachedLapply"
     )
 
 importFrom(digest, digest)
