@@ -8,7 +8,7 @@ The files include source code and documentation of *diskmemoiser: Disk Memoisati
 
 ### Release and Development
 
-The release version of this package is available on CRAN: <http://cran.r-project.org/web/packages/diskmemoiser/>
+The release version of this package is available on CRAN: <http://cran.r-project.org/package=diskmemoiser>
 
 A developmental repository is available on github: <https://github.com/richard987/diskmemoiser/>
 

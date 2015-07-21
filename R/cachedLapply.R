@@ -16,9 +16,9 @@ cachedLapply <- function(x, fun, memo.cache, plapply = lapply, ...,
   # hash the x list
   .hashed.vals <- lapply(x, function(i) {
     if (compare.args.as.characters) {
-      .hash <- tolower(digest(as.character(i)))
+      .hash <- tolower(digest(as.character(list(i, ...))))
     } else {
-      .hash <- tolower(digest(i))
+      .hash <- tolower(digest(list(i, ...)))
     }
     return (paste0(.func.name, "_", .hash))
   })

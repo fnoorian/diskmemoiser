@@ -15,7 +15,7 @@ library("digest")
 
 diskMemoiser <- function(fun, memo.dir = "./memo", 
                          use.func.contents = FALSE,
-                         compare.args.as.characters = FALSE ) {
+                         compare.args.as.characters = FALSE) {
   
   if (!file.exists(memo.dir)) {
     dir.create(memo.dir, showWarnings = FALSE, recursive = TRUE)
