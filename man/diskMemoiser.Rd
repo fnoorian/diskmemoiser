@@ -7,8 +7,8 @@
 Performs memoisation of arbitrary functions to disk to speed up repeated calls to those functions.
 }
 \usage{
-diskMemoizer(fun, memo.dir = "./memo")
-diskMemoiser(fun, memo.dir = "./memo")
+diskMemoizer(fun, memo.dir = "./memo", use.func.contents = FALSE, compare.args.as.characters = FALSE)
+diskMemoiser(fun, memo.dir = "./memo", use.func.contents = FALSE, compare.args.as.characters = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,6 +17,17 @@ diskMemoiser(fun, memo.dir = "./memo")
   }
   \item{memo.dir}{
     An optional directory to store the memoised results. If not specified, defaults to "./memo"
+  }
+  \item{use.func.contents}{
+   If \code{TRUE}, uses the contents of \code{fun}. If \code{FALSE}, the functions name is used.
+   Usefull when the function may change in content, or the function name may change, but the  
+   content is similar.
+  }
+  \item{compare.args.as.characters}{
+    If \code{TRUE},
+    converts the function arguements into character strings before hashing them. 
+    Usefull when the arguements are object (functions) that their pointer
+    may change if they are reloaded (or re-sourced).
   }
 }
 \details{

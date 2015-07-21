@@ -4,11 +4,11 @@ The files include source code and documentation of *diskmemoiser: Disk Memoisati
 
 ### Contact Information
  * Farzad Noorian <farzad.noorian@sydney.edu.au> 
- * Richard Davis <richard.davis@sydney.edu.au> (Maintainer)
+ * Richard Davis <richard.davis@gmail.com> (Maintainer)
 
 ### Release and Development
 
-The release version of this package is available on CRAN: <http://cran.r-project.org/web/packages/diskmemoiser/>
+The release version of this package is available on CRAN: <http://cran.r-project.org/package=diskmemoiser>
 
 A developmental repository is available on github: <https://github.com/richard987/diskmemoiser/>
 

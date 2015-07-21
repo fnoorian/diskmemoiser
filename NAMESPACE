@@ -1,8 +1,8 @@
 export(
-	"diskMemoiser",
-	"diskMemoizer"
+	"diskMemoiser", "diskMemoizer",
+    "diskCache",
+    "cacheMemoiser", "cacheMemoizer", "cachedLapply"
     )
-import(
- 	"digest"
-    )
+
+importFrom(digest, digest)
 
